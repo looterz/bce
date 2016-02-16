@@ -1,3 +1,4 @@
+/*
 #include "script_component.hpp"
 
 if (isNil "BCE_Initialized") then
@@ -6,3 +7,4 @@ if (isNil "BCE_Initialized") then
 
   LOG(MSG_INIT);
 };
+*/
