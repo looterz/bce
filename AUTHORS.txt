@@ -1,0 +1,11 @@
+# BCE CONTRIBUTOR LIST
+# Feel free to add yourself to this when creating a pull
+# request, preferably including an email address.
+
+# Blastcore Eagle
+looter
+SchwererKonigstiger
+Azza
+
+# Blastcore Phoenix 2
+OpticalSnare

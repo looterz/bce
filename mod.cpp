@@ -1,0 +1,12 @@
+name = "Blastcore Eagle 1.0.0";
+picture = "logo_bce_ca.paa";
+actionName = "GitHub";
+action = "https://github.com/looterz/bce";
+description = "Blastcore Eagle - Version 1.0.0";
+logo = "logo_bce_ca.paa";
+logoOver = "logo_bce_ca.paa";
+tooltip = "BCE";
+tooltipOwned = "BCE Owned";
+overview = "Blastcore Eagle, also known as BCE, is a community driven project to improve the quality and authenticity of visual effects in ArmA 3.";
+author = "Blastcore Eagle Team";
+overviewPicture = "logo_bce_ca.paa";
