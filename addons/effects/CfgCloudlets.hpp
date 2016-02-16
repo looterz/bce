@@ -495,7 +495,7 @@ class CfgCloudlets
 	 emissiveColor[]=
 		{
 			{80,80,80,0},{0,0,0,0}};
-	}
+	};
 	class cloudlight_large_fire: Default
 	{
      interval=0.01;
@@ -537,7 +537,7 @@ class CfgCloudlets
 	 emissiveColor[]=
 		{
 			{120,20,0,0},{0,0,0,0}};
-	}
+	};
 	class CounterMeasuresFlare: Default
 	{
 		interval=0.008;
@@ -3177,11 +3177,9 @@ class CfgCloudlets
 		randomDirectionPeriodVar=0;
 		randomDirectionIntensityVar=0;
 		particleEffects="Blastcore_Artillery_ExplosionSmoke_EmitterLink";
-        destroyOnWaterSurface = 1;
-		emissiveColor[]=
-		{
-			{10000,10000,10000,0.08},{0,0,0,0}};
-	    }
+    destroyOnWaterSurface = 1;
+		emissiveColor[]={{10000,10000,10000,0.08},{0,0,0,0}};
+	};
 	class Blastcore_Artillery_ExplosionSmoke: Default
 	{
 		interval=0.08;
@@ -4095,10 +4093,8 @@ class CfgCloudlets
 		colorVar[]={0,0,0,0};
 		randomDirectionPeriodVar=0;
 		randomDirectionIntensityVar=0;
-		emissiveColor[]=
-		{
-			{1000,1000,1000,0},{0,0,0,0}};
-	}
+		emissiveColor[]={{1000,1000,1000,0},{0,0,0,0}};
+	};
 	class Vehicle_Explosion_Smoke1: Default
 	{
 		interval=0.02;
@@ -10773,7 +10769,7 @@ class CfgCloudlets
 		{
 			{0.85,0.85,0.85,0.03},
 			{0.88,0.88,0.88,0.025},
-			{0.88,0.88,0.88,0.001},
+			{0.88,0.88,0.88,0.001}
 		};
 		colorCoef[]=
 		{
@@ -11525,10 +11521,8 @@ class CfgCloudlets
 		randomDirectionPeriodVar=0;
 		randomDirectionIntensityVar=0;
 		particleEffects="RockBackfireLight";
-		emissiveColor[]=
-		{
-			{10000,10000,8000,0},{10000,10000,4000,0}};
-	}
+		emissiveColor[]={{10000,10000,8000,0},{10000,10000,4000,0}};
+	};
 	class RocketBacksmokeNLAW: Default
 	{
 		interval=0.001;
@@ -11675,10 +11669,8 @@ class CfgCloudlets
 		randomDirectionPeriodVar=0;
 		randomDirectionIntensityVar=0;
 		particleEffects="RockBackfireLight";
-		emissiveColor[]=
-		{
-			{10000,10000,8000,0},{10000,10000,4000,0}};
-	}
+		emissiveColor[]={{10000,10000,8000,0},{10000,10000,4000,0}};
+	};
 	class RocketBacksmokeRPG: Default
 	{
 		interval=0.04;
@@ -11820,10 +11812,8 @@ class CfgCloudlets
 		randomDirectionPeriodVar = 0;
 		randomDirectionIntensityVar = 0;
 		particleEffects="RockBackfireLight";
-		emissiveColor[]=
-		{
-			{10000,10000,8000,0},{10000,10000,4000,0}};
-	}
+		emissiveColor[]={{10000,10000,8000,0},{10000,10000,4000,0}};
+	};
 	class RocketBacksmokeRPGNT: Default
 	{
 		interval = 0.002;
@@ -11947,10 +11937,8 @@ class CfgCloudlets
 		randomDirectionPeriodVar = 0;
 		randomDirectionIntensityVar = 0;
 		particleEffects="RockBackfireLight";
-		emissiveColor[]=
-		{
-			{10000,10000,8000,0},{10000,10000,4000,0}};
-	}
+		emissiveColor[]={{10000,10000,8000,0},{10000,10000,4000,0}};
+	};
 	class RocketBacksmokeStaticRPG: Default
 	{
 		interval = 0.0001;
@@ -28529,11 +28517,9 @@ class CfgCloudlets
 		colorVar[]={0,0,0,0};
 		randomDirectionPeriodVar=0;
 		randomDirectionIntensityVar=0;
-        destroyOnWaterSurface = 1;
-		emissiveColor[]=
-		{
-			{10000,10000,8000,0},{10000,10000,4000,0}};
-	}
+    destroyOnWaterSurface = 1;
+		emissiveColor[]={{10000,10000,8000,0},{10000,10000,4000,0}};
+	};
 	class M136_Smoke_01: Default
 	{
 		interval=0.06;
@@ -29779,11 +29765,9 @@ class CfgCloudlets
 		colorVar[]={0,0,0,0};
 		randomDirectionPeriodVar=0;
 		randomDirectionIntensityVar=0;
-        destroyOnWaterSurface = 1;
-		emissiveColor[]=
-		{
-			{10000,10000,10000,0},{0,0,0,0}};
-	}
+    destroyOnWaterSurface = 1;
+		emissiveColor[]={{10000,10000,10000,0},{0,0,0,0}};
+	};
 	class MK82_Explosion_02: Default
 	{
 		interval=0.003;
@@ -29839,11 +29823,9 @@ class CfgCloudlets
 		colorVar[]={0,0,0,0};
 		randomDirectionPeriodVar=0;
 		randomDirectionIntensityVar=0;
-        destroyOnWaterSurface = 1;
-		emissiveColor[]=
-		{
-			{10000,10000,10000,0},{0,0,0,0}};
-	}
+    destroyOnWaterSurface = 1;
+		emissiveColor[]={{10000,10000,10000,0},{0,0,0,0}};
+	};
 	class FuelTruck_Explosion: Default
 	{
 		interval=0.02;
@@ -29931,10 +29913,8 @@ class CfgCloudlets
 		randomDirectionPeriodVar=0;
 		randomDirectionIntensityVar=0;
 		particleEffects="FuelTruck_FireLight";
-		emissiveColor[]=
-		{
-			{500,500,500,0},{0,0,0,0}};
-	}
+		emissiveColor[]={{500,500,500,0},{0,0,0,0}};
+	};
 	class FuelTruck_Explosion_02: Default
 	{
 		interval=0.08;
@@ -29979,10 +29959,8 @@ class CfgCloudlets
 		colorVar[]={0,0,0,0};
 		randomDirectionPeriodVar=0;
 		randomDirectionIntensityVar=0;
-		emissiveColor[]=
-		{
-			{500,500,500,0},{0,0,0,0}};
-	}
+		emissiveColor[]={{500,500,500,0},{0,0,0,0}};
+	};
 	class FuelTruckSmoke: Default
 	{
 		interval=0.01;
@@ -30126,10 +30104,8 @@ class CfgCloudlets
 		colorVar[]={0,0,0,0};
 		randomDirectionPeriodVar=0;
 		randomDirectionIntensityVar=0;
-		emissiveColor[]=
-		{
-			{100000,100000,100000,0},{0,0,0,0}};
-	}
+		emissiveColor[]={{100000,100000,100000,0},{0,0,0,0}};
+	};
 	class AmmoTruck_Explosion_02: Default
 	{
 		interval=0.008;
@@ -30185,10 +30161,8 @@ class CfgCloudlets
 		colorVar[]={0,0,0,0};
 		randomDirectionPeriodVar=0;
 		randomDirectionIntensityVar=0;
-		emissiveColor[]=
-		{
-			{10000,10000,10000,0},{0,0,0,0}};
-	}
+		emissiveColor[]={{10000,10000,10000,0},{0,0,0,0}};
+	};
 	class AmmoTruckSmoke: Default
 	{
 		interval=0.1;
@@ -31939,6 +31913,7 @@ class CfgCloudlets
 		randomDirectionPeriodVar=0;
 		randomDirectionIntensityVar=0;
 	};
+	/* @TODO: re-implement effect
 	class ExplosionFlare: Default
 	{
 		interval=0.0099999998;
@@ -32018,6 +31993,7 @@ class CfgCloudlets
 		randomDirectionPeriodVar=0;
 		randomDirectionIntensityVar=0;
 	};
+	*/
 	class VehExplosionParticles: Default
 	{
 		interval="0.1 * interval + 0.1";
@@ -32340,8 +32316,8 @@ class CfgCloudlets
 		animationSpeed[]={1000};
 		randomDirectionPeriod=1;
 		randomDirectionIntensity=0;
-		onTimerScript="WarFXPE\ParticleEffects\scripts\WPTrail.sqf";
-		beforeDestroyScript="WarFXPE\ParticleEffects\scripts\WPTrail.sqf";
+		onTimerScript=""; // @NOTE: was WarFXPE\ParticleEffects\scripts\WPTrail.sqf (no longer exists)
+		beforeDestroyScript=""; // @NOTE: was WarFXPE\ParticleEffects\scripts\WPTrail.sqf (no longer exists)
 		lifeTimeVar=0.5;
 		positionVar[]={2,2,2};
 		MoveVelocityVar[]={70,70,70};
@@ -32976,6 +32952,7 @@ class CfgCloudlets
 		randomDirectionPeriodVar=0;
 		randomDirectionIntensityVar=0;
 	};
+	/* @TODO: re-implement effect
 	class Stones: Default
 	{
 		interval="0.01 * interval + 0.01";
@@ -33013,6 +32990,7 @@ class CfgCloudlets
 		randomDirectionPeriodVar=0;
 		randomDirectionIntensityVar=0;
 	};
+	*/
 	class Sparks_small: Default
 	{
 		interval=0.001;
@@ -33213,11 +33191,9 @@ class CfgCloudlets
 		colorVar[]={0,0,0,0};
 		randomDirectionPeriodVar=0;
 		randomDirectionIntensityVar=0;
-        destroyOnWaterSurface = 1;
-		emissiveColor[]=
-		{
-			{10000,10000,8000,0},{10000,10000,4000,0}};
-	}
+    destroyOnWaterSurface = 1;
+		emissiveColor[]={{10000,10000,8000,0},{10000,10000,4000,0}};
+	};
 	class 30mmSparks_02: Default
 	{
 		interval=0.01;
@@ -33256,11 +33232,9 @@ class CfgCloudlets
 		colorVar[]={0,0,0,0};
 		randomDirectionPeriodVar=0;
 		randomDirectionIntensityVar=0;
-        destroyOnWaterSurface = 1;
-		emissiveColor[]=
-		{
-			{10000,10000,8000,0},{0,0,0,0}};
-	}
+    destroyOnWaterSurface = 1;
+		emissiveColor[]={{10000,10000,8000,0},{0,0,0,0}};
+	};
 	class Sparks_ammo_01: Default
 	{
 		interval=0.003;
@@ -33610,6 +33584,7 @@ class CfgCloudlets
 		randomDirectionPeriodVar=0;
 		randomDirectionIntensityVar=0;
 	};
+	/* @TODO: re-implement effect
 	class FIREWORK_Trails: Default
 	{
 		interval=0.00019999999;
@@ -33657,6 +33632,7 @@ class CfgCloudlets
 		randomDirectionPeriodVar=0;
 		randomDirectionIntensityVar=0;
 	};
+	*/
 	class FIREWORK_Yellow_HUGE: Default
 	{
 		interval=0.00079999998;
@@ -33751,6 +33727,7 @@ class CfgCloudlets
 		randomDirectionPeriodVar=0;
 		randomDirectionIntensityVar=0;
 	};
+	/* @TODO: re-implement effect
 	class FIRE_Trails: Default
 	{
 		interval=0.001;
@@ -33798,6 +33775,7 @@ class CfgCloudlets
 		randomDirectionPeriodVar=0;
 		randomDirectionIntensityVar=0;
 	};
+	*/
 	class SmokeTrails: Default
 	{
 		interval=0;
@@ -34040,10 +34018,8 @@ class CfgCloudlets
 		colorVar[]={0,0,0,0};
 		randomDirectionPeriodVar=0;
 		randomDirectionIntensityVar=0;
-		emissiveColor[]=
-		{
-			{1000,1000,1000,0},{0,0,0,0}};
-	}
+		emissiveColor[]={{1000,1000,1000,0},{0,0,0,0}};
+	};
 	class GrenadeSmoke1: Default
 	{
 		interval=0.0020000001;
@@ -35840,6 +35816,7 @@ class CfgCloudlets
 		randomDirectionPeriodVar=0;
 		randomDirectionIntensityVar=0;
 	};
+	/* @TODO: re-implement effect
 	class ShellSmokeTrail4: Default
 	{
 		interval=0.0020000001;
@@ -35921,6 +35898,7 @@ class CfgCloudlets
 		randomDirectionPeriodVar=0;
 		randomDirectionIntensityVar=0;
 	};
+	*/
 	class ShellSmoke: Default
 	{
 		interval="0.01 * interval + 0.01";
@@ -37153,11 +37131,9 @@ class CfgCloudlets
 		colorVar[]={0,0,0,0};
 		randomDirectionPeriodVar=0;
 		randomDirectionIntensityVar=0;
-        destroyOnWaterSurface = 1;
-		emissiveColor[]=
-		{
-			{10000,10000,8000,0},{10000,10000,4000,0}};
-	}
+    destroyOnWaterSurface = 1;
+		emissiveColor[]={{10000,10000,8000,0},{10000,10000,4000,0}};
+	};
 	class 25mm_Explode_02: Default
 	{
 		interval=1;
@@ -37197,11 +37173,9 @@ class CfgCloudlets
 		colorVar[]={0,0,0,0};
 		randomDirectionPeriodVar=0;
 		randomDirectionIntensityVar=0;
-        destroyOnWaterSurface = 1;
-		emissiveColor[]=
-		{
-			{10000,10000,10000,0},{0,0,0,0}};
-	}
+    destroyOnWaterSurface = 1;
+		emissiveColor[]={{10000,10000,10000,0},{0,0,0,0}};
+	};
 	class 25mm_Blast_Glow: Default
 	{
 		interval=0.002;
@@ -37531,11 +37505,9 @@ class CfgCloudlets
 		colorVar[]={0,0,0,0};
 		randomDirectionPeriodVar=0;
 		randomDirectionIntensityVar=0;
-        destroyOnWaterSurface = 1;
-		emissiveColor[]=
-		{
-			{200,60,0,0},{200,60,0,0}};
-	}
+    destroyOnWaterSurface = 1;
+		emissiveColor[]={{200,60,0,0},{200,60,0,0}};
+	};
 	class 30mmImpact1: Default
 	{
 		interval="4";
@@ -38598,6 +38570,7 @@ class CfgCloudlets
 		randomDirectionPeriodVar=0;
 		randomDirectionIntensityVar=0;
 	};
+	/* @TODO: re-implement effect
 	class HeliExplosionParts01: Default
 	{
 		interval=0.059999999;
@@ -38637,6 +38610,7 @@ class CfgCloudlets
 		randomDirectionPeriodVar=0;
 		randomDirectionIntensityVar=0;
 	};
+	*/
 	class HeliDestructionShards1: Default
 	{
 		interval=0.34999999;
@@ -38883,6 +38857,7 @@ class CfgCloudlets
 		randomDirectionPeriodVar=0;
 		randomDirectionIntensityVar=0;
 	};
+	/* @TODO: re-implement effect
 	class ObjectDestructionFlare1: Default
 	{
 		interval=0.07;
@@ -38977,12 +38952,13 @@ class CfgCloudlets
 		randomDirectionPeriodVar=0;
 		randomDirectionIntensityVar=0;
 	};
+  */
 	class ObjectDestructionSparks: Default
 	{
 		interval="1.5 * fireInterval";
 		circleRadius=0;
 		circleVelocity[]={0,0,0};
-		particleShape="WarFXPE\cl_fire";
+		particleShape="\A3\data_f\cl_fire"; // @NOTE: was WarFXPE\cl_fire (no longer exists)
 		animationName="";
 		particleType="Billboard";
 		timerPeriod=1;

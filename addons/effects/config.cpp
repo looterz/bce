@@ -5,7 +5,7 @@ class CfgPatches {
         units[] = {};
         weapons[] = {};
         requiredVersion = REQUIRED_VERSION;
-        requiredAddons[] = {"bce_main", "bce_data"};
+        requiredAddons[] = {"bce_main", "WarFXPE"};
         author[] = {"Blastcore Eagle Team"};
         authorUrl = "https://github.com/looterz/bce";
         VERSION_CONFIG;

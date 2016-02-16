@@ -20,13 +20,13 @@
 
 **Blastcore Eagle** is a configuration cleanup and compatibility patch collection for [Blastcore Phoenix 2](http://www.armaholic.com/page.php?id=23899), originally created by OpticalSnare.
 
-The project is entirely **open-source** and all contributions are welcome. Feel free to maintain your own custom version, so long as the changes you make are open to the public in accordance with the ArmA Public License and GNU General Public License ([ArmAPub, GPLv2](https://github.com/acemod/ACE3/blob/master/LICENSE)).
+The project is entirely **open-source** and all contributions are welcome. Feel free to maintain your own custom version, so long as the changes you make are open to the public in accordance with the ArmA Public License and GNU General Public License ([ArmAPub, GPLv2](https://github.com/looterz/bce/blob/master/LICENSE)).
 
 #### Contributing
 You can help out with the ongoing development by looking for potential bugs in our code base, or by contributing new features. To contribute something to BCE, simply fork this repository and submit your pull requests for review by other collaborators.
 
 #### Testing & building
-The entire project layout and build process is exactly like [ACE3](/acemod/ace3).
+The entire project layout and build process is exactly like [ACE3](acemod/ACE3), with the only difference being WarFXPE's folder must be copied to your P:\ drive before building to fix external asset references.
 
 To help us test the latest development changes, download our master branch ([directly](https://github.com/acemod/ACE3/archive/master.zip), or [with git](https://help.github.com/articles/fetching-a-remote/)), then assemble a test build.
 

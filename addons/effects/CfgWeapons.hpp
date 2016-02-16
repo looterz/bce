@@ -305,7 +305,7 @@ class CfgAmmo
 		explosive=0.1;
 		CraterEffects="30mmSmoke";
 		explosionEffects="30mmExplode";
-		class
+		class HitEffects
 		{
 			hitVirtual = "ImpactMetalSabotBig";
 			hitMetal="ImpactMetalSabotSmall";

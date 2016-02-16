@@ -4,7 +4,7 @@ forcedDiffuse[]={0.80599874,0,0,0};
 emmisive[]={0.65100002,0,0,1};
 specular[]={0.99999899,0,0,0};
 specularPower=49;
-nextPass="SKY_T800\data\flash-pass2.rvmat";
+nextPass="\a3\data_f\flash-pass2.rvmat";
 PixelShaderID="Normal";
 VertexShaderID="Basic";
 class Stage0
@@ -15,7 +15,7 @@ class Stage0
 };
 class Stage1
 {
-	texture="SKY_T800\data\BodyTex.paa";
+	texture="#(argb,8,8,3)color(1,1,1,1,CO)";
 	uvSource="tex";
 	class uvTransform
 	{
@@ -26,7 +26,3 @@ class Stage1
 	};
 	Filter="Trilinear";
 };
-
-
-
-

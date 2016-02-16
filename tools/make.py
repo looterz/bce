@@ -60,7 +60,7 @@ if sys.platform == "win32":
 ######## GLOBALS #########
 project = "@bce"
 project_version = "1.0.0"
-arma3tools_path = ""
+arma3tools_path = "P:\\"
 work_drive = ""
 module_root = ""
 make_root = ""
@@ -72,7 +72,7 @@ key = ""
 dssignfile = ""
 prefix = "bce"
 pbo_name_prefix = "bce_"
-signature_blacklist = ["bce_server.pbo"]
+signature_blacklist = []
 importantFiles = ["mod.cpp", "README.md", "AUTHORS.txt", "LICENSE", "logo_bce_ca.paa"]
 versionFiles = ["README.md", "mod.cpp"]
 
@@ -667,8 +667,8 @@ def restore_version_files():
 def get_private_keyname(commitID,module="main"):
     global pbo_name_prefix
 
-    aceVersion = get_project_version()
-    keyName = str("{prefix}{version}-{commit_id}".format(prefix=pbo_name_prefix,version=aceVersion,commit_id=commitID))
+    bceVersion = get_project_version()
+    keyName = str("{prefix}{version}-{commit_id}".format(prefix=pbo_name_prefix,version=bceVersion,commit_id=commitID))
     return keyName
 
 
@@ -867,8 +867,6 @@ See the make.cfg file for additional build options.
     make_root_parent = os.path.abspath(os.path.join(os.getcwd(), os.pardir))
     os.chdir(make_root)
 
-
-
     cfg = configparser.ConfigParser();
     try:
         cfg.read(os.path.join(make_root, "make.cfg"))
@@ -989,16 +987,15 @@ See the make.cfg file for additional build options.
         cache = {}
 
     # Check the ace build version (from main) with cached version - Forces a full rebuild when version changes
-    aceVersion = get_project_version()
+    bceVersion = get_project_version()
     cacheVersion = "None";
     if 'cacheVersion' in cache:
         cacheVersion = cache['cacheVersion']
 
-    if (aceVersion != cacheVersion):
+    if (bceVersion != cacheVersion):
         cache = {}
-        print("Reseting Cache {0} to New Version {1}".format(cacheVersion, aceVersion))
-        cache['cacheVersion'] = aceVersion
-
+        print("Reseting Cache {0} to New Version {1}".format(cacheVersion, bceVersion))
+        cache['cacheVersion'] = bceVersion
 
     if not os.path.isdir(os.path.join(release_dir, project, "addons")):
         try:
@@ -1063,8 +1060,6 @@ See the make.cfg file for additional build options.
                 else:
                     print_error("Failed to create key!")
 
-
-
             else:
                 print_green("\nNOTE: Using key {}".format(os.path.join(private_key_path, key_name + ".biprivatekey")))
 
@@ -1128,12 +1123,22 @@ See the make.cfg file for additional build options.
             new_sha = get_directory_hash(os.path.join(module_root, module))
 
             # Is the pbo or sig file missing?
-            missing = not os.path.isfile(os.path.join(release_dir, project, "addons", "{}{}.pbo".format(pbo_name_prefix,module)))
-            sigFile = "{}{}.pbo.{}.bisign".format(pbo_name_prefix,module,key_name)
+            formatName = "{}{}.pbo".format(pbo_name_prefix,module)
+            formatSigName = "{}{}.pbo.{}.bisign".format(pbo_name_prefix,module,key_name)
+
+            if module == "WarFXPE":
+                formatName = "{}.pbo".format(module)
+                formatSigName = "{}.pbo.{}.bisign".format(module,key_name)
+
+            missing = not os.path.isfile(os.path.join(release_dir, project, "addons", formatName))
+            sigFile = formatSigName
             sigMissing = not os.path.isfile(os.path.join(release_dir, project, "addons", sigFile))
 
             if missing:
-                print_yellow("Missing PBO file {}{}.pbo. Building...".format(pbo_name_prefix,module))
+                formatWarning = "Missing PBO file {}{}.pbo. Building...".format(pbo_name_prefix,module)
+                if module == "WarFXPE":
+                    formatWarning = "Missing PBO file {}.pbo. Building...".format(module)
+                print_yellow(formatWarning)
 
             # Check if it needs rebuilt
             # print ("Hash:", new_sha)
@@ -1143,7 +1148,7 @@ See the make.cfg file for additional build options.
                     if sigMissing:
                         if key:
                             print("Missing Signature key {}".format(sigFile))
-                            build_signature_file(os.path.join(module_root, release_dir, project, "addons", "{}{}.pbo".format(pbo_name_prefix,module)))
+                            build_signature_file(os.path.join(module_root, release_dir, project, "addons", formatName))
                     # Skip everything else
                     continue
 
@@ -1168,13 +1173,13 @@ See the make.cfg file for additional build options.
 
             try:
                 # Remove the old pbo, key, and log
-                old = os.path.join(module_root, release_dir, project, "addons", "{}{}".format(pbo_name_prefix,module)) + "*"
+                old = os.path.join(module_root, release_dir, project, "addons", formatName) + "*"
                 files = glob.glob(old)
                 for f in files:
                     os.remove(f)
 
                 if pbo_name_prefix:
-                    old = os.path.join(module_root, release_dir, project, "addons", "{}{}".format(pbo_name_prefix,module)) + "*"
+                    old = os.path.join(module_root, release_dir, project, "addons", formatName) + "*"
                     files = glob.glob(old)
                     for f in files:
                         os.remove(f)
@@ -1215,6 +1220,7 @@ See the make.cfg file for additional build options.
                         else:
                             cmd = [pboproject, "-P", os.path.join(work_drive, prefix, module), "+Engine=Arma3", "-S","+Noisy", "-X", "+Clean", "+Mod="+os.path.join(module_root, release_dir, project), "-Key"]
 
+                    print_yellow("build cmd: {}".format(cmd))
                     color("grey")
                     if quiet:
                         devnull = open(os.devnull, 'w')
@@ -1229,15 +1235,15 @@ See the make.cfg file for additional build options.
                         # Prettyprefix rename the PBO if requested.
                         if pbo_name_prefix:
                             try:
-                                os.rename(os.path.join(module_root, release_dir, project, "addons", "{}.pbo".format(module)), os.path.join(module_root, release_dir, project, "addons", "{}{}.pbo".format(pbo_name_prefix,module)))
+                                os.rename(os.path.join(module_root, release_dir, project, "addons", "{}.pbo".format(module)), os.path.join(module_root, release_dir, project, "addons", formatName))
                             except:
                                 raise
                                 print_error("Could not rename built PBO with prefix.")
                         # Sign result
-                        if (key and not "{}{}.pbo".format(pbo_name_prefix,module) in signature_blacklist):
+                        if (key and not formatName in signature_blacklist):
                             print("Signing with {}.".format(key))
                             if pbo_name_prefix:
-                                ret = subprocess.call([dssignfile, key, os.path.join(module_root, release_dir, project, "addons", "{}{}.pbo".format(pbo_name_prefix,module))])
+                                ret = subprocess.call([dssignfile, key, os.path.join(module_root, release_dir, project, "addons", formatName)])
                             else:
                                 ret = subprocess.call([dssignfile, key, os.path.join(module_root, release_dir, project, "addons", "{}.pbo".format(module))])
 
@@ -1312,7 +1318,7 @@ See the make.cfg file for additional build options.
                         if (key and not "{}{}.pbo".format(pbo_name_prefix,module) in signature_blacklist) :
                             print("Signing with {}.".format(key))
                             if pbo_name_prefix:
-                                ret = subprocess.call([dssignfile, key, os.path.join(make_root, release_dir, project, "addons","{}{}.pbo".format(pbo_name_prefix,module))])
+                                ret = subprocess.call([dssignfile, key, os.path.join(make_root, release_dir, project, "addons", formatName)])
                             else:
                                 ret = subprocess.call([dssignfile, key, os.path.join(make_root, release_dir, project, "addons", "{}.pbo".format(module))])
 
