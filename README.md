@@ -13,7 +13,7 @@
 </p>
 
 <p align="center">
-    <sup><strong>Requires the latest version of <a href="https://github.com/CBATeam/CBA_A3/releases">CBA A3</a>.
+    <sup><strong>Requires the latest version of <a href="https://github.com/CBATeam/CBA_A3/releases">CBA A3</a>.</strong></sup>
 </p>
 
 *This project is currently a heavy work in progress, if you find any problems open an issue.*
