@@ -5,7 +5,7 @@
         <img src="https://img.shields.io/badge/Version-1.0.0-blue.svg?style=flat-square" alt="BCE Version">
     </a>
     <a href="https://github.com/looterz/bce/releases/download/v1.0.0/bce_1.0.0.zip">
-        <img src="https://img.shields.io/badge/Download-31.6_MB-green.svg?style=flat-square" alt="BCE Download">
+        <img src="https://img.shields.io/badge/Download-36.5_MB-green.svg?style=flat-square" alt="BCE Download">
     </a>
     <a href="https://github.com/looterz/bce/issues">
         <img src="https://img.shields.io/github/issues-raw/looterz/bce.svg?style=flat-square&label=Issues" alt="BCE Issues">
