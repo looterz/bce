@@ -15,7 +15,7 @@
 <p align="center">
     <sup><strong>Requires the latest version of <a href="https://github.com/CBATeam/CBA_A3/releases">CBA A3</a>.</strong></sup>
     <br />
-    <i>This project is currently a heavy work in progress, if you find any problems please open an issue.</i>
+    <i>This project is currently a work in progress, if you find any problems please open an issue.</i>
 </p>
 
 **Blastcore Eagle** is a configuration cleanup and compatibility patch collection for [Blastcore Phoenix 2](http://www.armaholic.com/page.php?id=23899), originally created by OpticalSnare.
