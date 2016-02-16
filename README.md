@@ -7,9 +7,6 @@
     <a href="https://github.com/looterz/bce/releases/download/v1.0.0/bce_1.0.0.zip">
         <img src="https://img.shields.io/badge/Download-36.5_MB-green.svg?style=flat-square" alt="BCE Download">
     </a>
-    <a href="https://github.com/looterz/bce/issues">
-        <img src="https://img.shields.io/github/issues-raw/looterz/bce.svg?style=flat-square&label=Issues" alt="BCE Issues">
-    </a>
     <a href="https://github.com/looterz/bce/blob/master/LICENSE">
         <img src="https://img.shields.io/badge/License-GPLv2-red.svg?style=flat-square" alt="BCE License">
     </a>
