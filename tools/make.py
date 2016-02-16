@@ -1306,7 +1306,7 @@ See the make.cfg file for additional build options.
                     # Prettyprefix rename the PBO if requested.
                     if pbo_name_prefix:
                         try:
-                            os.rename(os.path.join(make_root, release_dir, project, "addons", "{}.pbo".format(module)), os.path.join(make_root, release_dir, project, "addons", "{}{}.pbo".format(pbo_name_prefix,module)))
+                            os.rename(os.path.join(make_root, release_dir, project, "addons", "{}.pbo".format(module)), os.path.join(make_root, release_dir, project, "addons", formatName))
                         except:
                             raise
                             print_error("Could not rename built PBO with prefix.")
@@ -1315,7 +1315,7 @@ See the make.cfg file for additional build options.
                         # Sign result
 
                         #print_yellow("Sig_fileName: ace_{}.pbo".format(module))
-                        if (key and not "{}{}.pbo".format(pbo_name_prefix,module) in signature_blacklist) :
+                        if (key and not formatName in signature_blacklist) :
                             print("Signing with {}.".format(key))
                             if pbo_name_prefix:
                                 ret = subprocess.call([dssignfile, key, os.path.join(make_root, release_dir, project, "addons", formatName)])
