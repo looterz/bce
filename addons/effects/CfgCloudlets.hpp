@@ -33584,7 +33584,6 @@ class CfgCloudlets
 		randomDirectionPeriodVar=0;
 		randomDirectionIntensityVar=0;
 	};
-	/* @TODO: re-implement effect
 	class FIREWORK_Trails: Default
 	{
 		interval=0.00019999999;
@@ -33621,7 +33620,7 @@ class CfgCloudlets
 		animationSpeed[]={-2};
 		randomDirectionPeriod=0;
 		randomDirectionIntensity=0;
-		onTimerScript="WarFXPE\ParticleEffects\scripts\FireworkTrail.sqf";
+		onTimerScript=""; // @NOTE: was WarFXPE\ParticleEffects\scripts\FireworkTrail.sqf
 		beforeDestroyScript="";
 		lifeTimeVar=0;
 		positionVar[]={0,0,0};
@@ -33632,7 +33631,6 @@ class CfgCloudlets
 		randomDirectionPeriodVar=0;
 		randomDirectionIntensityVar=0;
 	};
-	*/
 	class FIREWORK_Yellow_HUGE: Default
 	{
 		interval=0.00079999998;
@@ -33727,7 +33725,6 @@ class CfgCloudlets
 		randomDirectionPeriodVar=0;
 		randomDirectionIntensityVar=0;
 	};
-	/* @TODO: re-implement effect
 	class FIRE_Trails: Default
 	{
 		interval=0.001;
@@ -33764,7 +33761,7 @@ class CfgCloudlets
 		animationSpeed[]={-2};
 		randomDirectionPeriod=0;
 		randomDirectionIntensity=0;
-		onTimerScript="WarFXPE\ParticleEffects\scripts\Fire_Trail.sqf";
+		onTimerScript=""; // @NOTE: was WarFXPE\ParticleEffects\scripts\Fire_Trail.sqf
 		beforeDestroyScript="";
 		lifeTimeVar=0;
 		positionVar[]={0,0,0};
@@ -33775,7 +33772,6 @@ class CfgCloudlets
 		randomDirectionPeriodVar=0;
 		randomDirectionIntensityVar=0;
 	};
-	*/
 	class SmokeTrails: Default
 	{
 		interval=0;
@@ -35816,7 +35812,6 @@ class CfgCloudlets
 		randomDirectionPeriodVar=0;
 		randomDirectionIntensityVar=0;
 	};
-	/* @TODO: re-implement effect
 	class ShellSmokeTrail4: Default
 	{
 		interval=0.0020000001;
@@ -35846,7 +35841,7 @@ class CfgCloudlets
 		animationSpeed[]={1};
 		randomDirectionPeriod=0;
 		randomDirectionIntensity=0;
-		onTimerScript="WarFXPE\ParticleEffects\scripts\SmokeTrail4.sqf";
+		onTimerScript=""; // @NOTE: was WarFXPE\ParticleEffects\scripts\SmokeTrail4.sqf
 		beforeDestroyScript="";
 		lifeTimeVar=0.2;
 		positionVar[]={0,0,0};
@@ -35887,7 +35882,7 @@ class CfgCloudlets
 		animationSpeed[]={1};
 		randomDirectionPeriod=0;
 		randomDirectionIntensity=0;
-		onTimerScript="WarFXPE\ParticleEffects\scripts\SmokeTrail5.sqf";
+		onTimerScript=""; // @NOTE: was WarFXPE\ParticleEffects\scripts\SmokeTrail5.sqf
 		beforeDestroyScript="";
 		lifeTimeVar=0.5;
 		positionVar[]={0,0,0};
@@ -35898,7 +35893,6 @@ class CfgCloudlets
 		randomDirectionPeriodVar=0;
 		randomDirectionIntensityVar=0;
 	};
-	*/
 	class ShellSmoke: Default
 	{
 		interval="0.01 * interval + 0.01";
@@ -38570,13 +38564,12 @@ class CfgCloudlets
 		randomDirectionPeriodVar=0;
 		randomDirectionIntensityVar=0;
 	};
-	/* @TODO: re-implement effect
 	class HeliExplosionParts01: Default
 	{
 		interval=0.059999999;
 		circleRadius=0;
 		circleVelocity[]={0,0,0};
-		particleShape="\ca\structures\wall\Wall_Tin_Pole";
+		particleShape="\a3\structures_f\walls\Wall_Tin_Pole"; // @NOTE: was \ca\structures\wall\Wall_Tin_Pole
 		particleFSNtieth=1;
 		particleFSIndex=0;
 		particleFSFrameCount=1;
@@ -38610,7 +38603,6 @@ class CfgCloudlets
 		randomDirectionPeriodVar=0;
 		randomDirectionIntensityVar=0;
 	};
-	*/
 	class HeliDestructionShards1: Default
 	{
 		interval=0.34999999;
