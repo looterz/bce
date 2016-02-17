@@ -19,11 +19,11 @@ class CfgPatches {
 
 class CfgCoreData
 {
-	eyeFlare = "WarFXPE\ParticleEffects\Flare\Flares\eyeflare_ca.paa";
+  eyeFlare = "WarFXPE\ParticleEffects\Flare\Flares\eyeflare_ca.paa";
   eyeFlareSun = "A3\data_f\masktextureflare01_co.paa";
 };
 
 class CfgLensFlare
 {
-	flareSizeEyeSun[] = {0.03};
+  flareSizeEyeSun[] = {0.03};
 };
