@@ -947,7 +947,7 @@ See the make.cfg file for additional build options.
     # See if we have been given specific modules to build from command line.
     if len(argv) > 1 and not make_release_zip:
         arg_modules = True
-        modules = argv[1:]
+        modules = [a for a in argv[1:] if a[0] != "-"]
 
     # Find the tools we need.
     try:
@@ -1430,6 +1430,8 @@ See the make.cfg file for additional build options.
         for failedModuleName in namesOfBuildsFailed:
             print("- {} failed.".format(failedModuleName))
 
+        sys.exit(1)
+
     else:
         print_green("\Completed with 0 errors.")
 
@@ -1438,4 +1440,8 @@ if __name__ == "__main__":
     main(sys.argv)
     d,h,m,s = Fract_Sec(timeit.default_timer() - start_time)
     print("\nTotal Program time elapsed: {0:2}h {1:2}m {2:4.5f}s".format(h,m,s))
+
+    if "--ci" in sys.argv:
+        sys.exit(0)
+
     input("Press Enter to continue...")
