@@ -58,23 +58,18 @@ class CfgAmmo
 	class BulletCore;
 	class ShellCore;
 	class MissileCore;
-	class ShellBase: ShellCore
-	{};
+	class ShellBase: ShellCore {};
 	class MissileBase: MissileCore
 	{
-	muzzleEffect = "";
+		muzzleEffect = "";
 	};
 	class GrenadeCore;
 	class BombCore;
 	class PipeBombBase;
 	class LaserBombCore;
 	class RocketCore;
-	class RocketBase: RocketCore
-	{
-	};
-	class GrenadeBase: GrenadeCore
-	{
-	};
+	class RocketBase: RocketCore {};
+	class GrenadeBase: GrenadeCore {};
 	class BulletBase: BulletCore
 	{
 		class HitEffects
@@ -244,7 +239,6 @@ class CfgAmmo
 			Hit_Foliage_Pine = "BCImpactDirt_30mm";
 		};
 	};
-
 	class Sh_120mm_APFSDS: ShellBase
 	{
 		explosive=0;
@@ -339,7 +333,6 @@ class CfgAmmo
 			Hit_Foliage_Pine = "BCImpactDirt_30mmHE";
 		};
 	};
-
 	class Gatling_30mm_HE_Plane_CAS_01_F: BulletBase
 	{
 		explosive=0.4;
@@ -362,7 +355,6 @@ class CfgAmmo
 			Hit_Foliage_Pine = "BCImpactDirt_30mmHE_Gatling";
 		};
 	};
-
 	class B_25mm: BulletBase
 	{
 		explosive=0.1;
@@ -452,7 +444,6 @@ class CfgAmmo
 			Hit_Foliage_Pine = "BCImpactDirt_120mmHE";
 		};
 	};
-
 	class Sh_105mm_HEAT_MP: Sh_125mm_HEAT
 	{
 		explosive=0.1;
@@ -475,11 +466,8 @@ class CfgAmmo
 			Hit_Foliage_Pine = "BCImpactDirt_120mmHE";
 		};
 	};
-
-	class rhs_ammo_of_base : Sh_125mm_HE
-    {};
-	class rhs_ammo_3of_base: rhs_ammo_of_base
-	{};
+	class rhs_ammo_of_base : Sh_125mm_HE {};
+	class rhs_ammo_3of_base: rhs_ammo_of_base {};
 	class rhs_ammo_3of26: rhs_ammo_3of_base
 	{
 		explosive=0.1;
@@ -501,7 +489,7 @@ class CfgAmmo
 			Hit_Foliage_Palm = "BCImpactDirt_120mmHE";
 			Hit_Foliage_Pine = "BCImpactDirt_120mmHE";
 	    };
-    };
+  };
 	class Sh_155mm_AMOS: ShellBase
 	{
 		CraterEffects="155mm_Smoke";
@@ -522,12 +510,12 @@ class CfgAmmo
 		CraterEffects="80mm_Smoke";
 		explosionEffects="80mm_Explode";
 	};
-    class Rocket_04_HE_F: MissileBase
+  class Rocket_04_HE_F: MissileBase
 	{
 		CraterEffects="80mm_Smoke";
 		explosionEffects="80mm_Explode";
 	};
-    class Rocket_04_AP_F: Rocket_04_HE_F
+  class Rocket_04_AP_F: Rocket_04_HE_F
 	{
 	    CraterEffects="80mm_Smoke";
 	    explosionEffects="80mm_Explode";
@@ -604,7 +592,7 @@ class CfgAmmo
 		CraterEffects="Hellfire_Smoke";
 		explosionEffects="Hellfire_Explode";
 	};
-    class Missile_AA_04_F: MissileBase
+  class Missile_AA_04_F: MissileBase
 	{
 		CraterEffects="AA_Smoke";
 		explosionEffects="AA_Explode";
