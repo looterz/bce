@@ -5,7 +5,6 @@ class CfgWeapons
 		fireLightDuration = 1;
 		fireLightIntensity = 0.5;
 	};
-
 	class Rifle;
 	class Rifle_Base_F: Rifle
 	{
@@ -648,7 +647,7 @@ class CfgAmmo
 	{
 		CraterEffects="BCImpactDirt_30mmHE";
 		explosionEffects="BCImpactConcrete_30mmHE";
-    };
+  };
 	class SatchelCharge_Remote_Ammo: PipeBombBase
 	{
 		CraterEffects="Hellfire_Smoke";
